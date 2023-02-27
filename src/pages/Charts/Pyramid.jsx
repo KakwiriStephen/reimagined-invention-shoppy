@@ -5,3 +5,5 @@ const Pyramid = () => {
 };
 
 export default Pyramid;
+
+// File structure
