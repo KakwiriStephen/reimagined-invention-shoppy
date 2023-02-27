@@ -39,6 +39,20 @@ const App = () => {
               Navbar
             </div>
           </div>
+
+          <div>
+            <Routes>
+              {/* Dahboard */}
+              <Route path="/" element="Ecommerce" />
+              <Route path="/ecommerce" element="Ecommerce" />
+
+              {/* Pages */}
+
+              <Route path="/orders" element="Orders" />
+              <Route path="/employees" element="Employees" />
+              <Route path="/customers" element="Customers" />
+            </Routes>
+          </div>
         </div>
       </BrowserRouter>
     </div>
