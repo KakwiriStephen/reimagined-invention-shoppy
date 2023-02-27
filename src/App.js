@@ -66,7 +66,7 @@ const App = () => {
               <Route path="/financial" element="Financial" />
               <Route path="/color-maping" element="ColorMapping" />
               <Route path="/pyramid" element="Pyramid" />
-              <Route path="/stacked" element="Staacked" />
+              <Route path="/stacked" element="Stacked" />
             </Routes>
           </div>
         </div>
