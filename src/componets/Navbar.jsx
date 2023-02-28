@@ -38,6 +38,14 @@ const Navbar = () => {
         color="blue"
         icon={<AiOutlineMenu />}
       />
+      <div className="flex">
+        <NavButton
+          title="cart"
+          // customFunc={() => handleClick("cart")}
+          color="blue"
+          icon={<FiShoppingCart />}
+        />
+      </div>
     </div>
   );
 };
