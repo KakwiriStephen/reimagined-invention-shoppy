@@ -5,7 +5,6 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./componets";
 
-//imports from index
 import {
   Orders,
   Ecommerce,
