@@ -21,13 +21,31 @@ const Ecommerce = () => {
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-[url('https://img.freepik.com/free-vector/colorful-abstract-background-with-squares_1035-3033.jpg?w=740&t=st=1677657953~exp=1677658553~hmac=7102530f908dc995dc38cd072762546b4e772afcb059a8089ff875cd5ffeb917')] bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
               <p className="text-2xl">$63,448</p>
             </div>
           </div>
+          <div className="mt-6">
+            <Button
+              color="white"
+              bgColor="blue"
+              text="Download"
+              borderRadius="10px"
+              size="md"
+            />
+          </div>
+        </div>
+
+        <div className=" flex m-3 flex-wrap justify-center gap-1 items-center">
+          {earningData.map((item) => (
+            <div
+              key={item.title}
+              className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl"
+            ></div>
+          ))}
         </div>
       </div>
     </div>
