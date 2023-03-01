@@ -1,9 +1,35 @@
-import React from 'react'
+import React from "react";
+import {
+  GridComponent,
+  ColumnsDirective,
+  ColumnDirective,
+  Resize,
+  Sort,
+  ContextMenu,
+  Filter,
+  Page,
+  ExcelExport,
+  PdfExport,
+  Edit,
+  Inject,
+} from "@syncfusion/ej2-react-grids";
 
-const Order = () => {
+import { ordersData, contextMenuItems, ordersGrid } from "../data/dummy";
+import { Header } from "../componets";
+
+const Orders = () => {
   return (
-    <div>Order</div>
-  )
-}
+    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
+      <Header category="page" title="Orders" />
+      <GridComponent>
+        <ColumnsDirective>
+          {ordersGrid.map((item, index) => (
+            <ColumnDirective key={index} {...item} />
+          ))}
+        </ColumnsDirective>
+      </GridComponent>
+    </div>
+  );
+};
 
-export default Order
+export default Orders;
