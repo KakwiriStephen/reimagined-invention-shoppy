@@ -19,8 +19,15 @@ import { Header } from "../componets";
 
 const Orders = () => {
   return (
-    <div>
+    <div className="m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="page" title="Orders" />
+      <GridComponent>
+        <ColumnsDirective>
+          {ordersGrid.map((item, index) => (
+            <ColumnDirective key={index} {...item} />
+          ))}
+        </ColumnsDirective>
+      </GridComponent>
     </div>
   );
 };
