@@ -65,6 +65,7 @@ const App = () => {
             </div>
 
             <div>
+              <ThemeSettings />
               <Routes>
                 {/* Dahboard */}
                 <Route path="/" element={<Ecommerce />} />
