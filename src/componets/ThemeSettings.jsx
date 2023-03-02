@@ -23,6 +23,17 @@ const ThemeSettings = () => {
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4">
           <p className=" font-semibold text-lg">Theme Options</p>
+          <div className="mt-4">
+            <input
+              type="radio"
+              id="light"
+              name="theme"
+              value="Light"
+              className="cursor-pointer"
+              onChange={() => {}}
+              checked={true}
+            />
+          </div>
         </div>
       </div>
     </div>
