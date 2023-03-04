@@ -16,13 +16,17 @@ import {
 } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
 import product9 from "../data/product9.jpg";
+import ecoImage from "../data/eco.png";
 
 const Ecommerce = () => {
   const { currentColor } = useStateContext();
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-[url('https://img.freepik.com/free-vector/colorful-abstract-background-with-squares_1035-3033.jpg?w=740&t=st=1677657953~exp=1677658553~hmac=7102530f908dc995dc38cd072762546b4e772afcb059a8089ff875cd5ffeb917')] bg-no-repeat bg-cover bg-center">
+        <div
+          className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3  bg-no-repeat bg-cover bg-center"
+          style={{ backgroundImage: `url(${ecoImage})` }}
+        >
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
