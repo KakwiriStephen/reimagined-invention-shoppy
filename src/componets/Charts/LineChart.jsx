@@ -18,7 +18,16 @@ import {
 import { useStateContext } from "../../contexts/ContextProvider";
 
 const LineChart = () => {
-  return <ChartComponent></ChartComponent>;
+  return (
+    <ChartComponent>
+      <Inject services={[LineSeries, DateTime, Legend, Tooltip]} />
+      <SeriesCollectionDirective>
+        {lineCustomSeries.map((item, index) => (
+          <SeriesDirective key={index} {...item} />
+        ))}
+      </SeriesCollectionDirective>
+    </ChartComponent>
+  );
 };
 
 export default LineChart;
