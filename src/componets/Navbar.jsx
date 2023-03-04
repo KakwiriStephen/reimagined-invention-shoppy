@@ -29,14 +29,13 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
+    currentColor,
     activeMenu,
     setActiveMenu,
-    isClicked,
-    setIsClicked,
     handleClick,
-    screenSize,
+    isClicked,
     setScreenSize,
-    currentColor,
+    screenSize,
   } = useStateContext();
 
   useEffect(() => {
@@ -57,11 +56,13 @@ const Navbar = () => {
     }
   }, [screenSize]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
+
   return (
-    <div className="flex justify-between p-2 md:mx-6 relative">
+    <div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
       <NavButton
         title="Menu"
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)}
+        customFunc={handleActiveMenu}
         color={currentColor}
         icon={<AiOutlineMenu />}
       />
@@ -72,7 +73,6 @@ const Navbar = () => {
           color={currentColor}
           icon={<FiShoppingCart />}
         />
-
         <NavButton
           title="Chat"
           dotColor="#03C9D7"
@@ -80,24 +80,25 @@ const Navbar = () => {
           color={currentColor}
           icon={<BsChatLeft />}
         />
-
         <NavButton
           title="Notification"
-          dotColor="#03C9D7"
+          dotColor="rgb(254, 201, 15)"
           customFunc={() => handleClick("notification")}
           color={currentColor}
           icon={<RiNotification3Line />}
         />
-
         <TooltipComponent content="Profile" position="BottomCenter">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" src={avatar} alt="" />
-
+            <img
+              className="rounded-full w-8 h-8"
+              src={avatar}
+              alt="user-profile"
+            />
             <p>
-              <span className="text-gray-400 text-14">Hi, </span> {"  "}
+              <span className="text-gray-400 text-14">Hi,</span>{" "}
               <span className="text-gray-400 font-bold ml-1 text-14">
                 Michael
               </span>
